@@ -2,6 +2,7 @@ import os
 import sys
 import zipfile
 import pandas as pd
+import numpy as np
 import pickle
 import yaml
 from src.Custom_Exception.CustomException import CustomException
@@ -44,11 +45,11 @@ def save_object(filepath,obj):
     try:
         dir_path = os.path.dirname(filepath)
         if os.path.exists(filepath):
-            with open(filepath,"rb") as fileobj:
+            with open(filepath,"wb") as fileobj:
                 pickle.dump(obj,fileobj)
         else:
             os.makedirs(dir_path)
-            with open(filepath,"rb") as fileobj:
+            with open(filepath,"wb") as fileobj:
                 pickle.dump(obj,fileobj)
     except Exception as e:
         raise CustomException(e,sys)
@@ -62,4 +63,18 @@ def write_yml(filepath,obj):
         os.makedirs(dir_path,exist_ok=True)
         with open(filepath,"w") as file:
             yaml.dump(obj,file)
+
+def save_object_as_numpy_arr(filepath,obj):
+    dir_path = os.path.dirname(filepath)
+    try: 
+        if os.path.exists(dir_path):
+            with open(filepath,"wb") as file:
+                np.save(file,obj)
+        else:
+            os.makedirs(dir_path)
+            with open(filepath,"wb") as file:
+                np.save(file,obj)
+        
+    except Exception as e:
+        raise CustomException(e,sys)
     

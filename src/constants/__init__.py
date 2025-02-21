@@ -27,5 +27,18 @@ DATA_VALIDATION_INVALID_DIR:str = "invalid_data"
 DATA_VALIDATION_DRIFT_REPORT_DIR:str = "drift_report"
 DATA_VALIDATION_DRIFT_REPORT_NAME:str = "report.yml"
 
+'''
+Data Transformation constants
+'''
+
+DATA_TRANSFORMATION_DIR:str = "data_transformed"
+DATA_TRANSFORMATION_FILE_PATH:str = "data"
+DATA_TRANSFORMATION_OBJECT_PATH:str = "Preprocessor"
+DATA_TRANSFORMATION_OBJECT:str = "preprocessor.pkl"
+KNN_IMPUTER_PARAMS = {
+    "missing_values":np.nan,
+    "n_neighbors":3,
+    "weights": "uniform"
+}
 
 
