@@ -1,0 +1,139 @@
+[ 2025-02-22 18:51:10,893 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-02-22 18:51:10,911 ] 97 werkzeug - INFO -  * Debugger PIN: 971-382-797
+[ 2025-02-22 18:51:11,322 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:11] "GET /train HTTP/1.1" 200 -
+[ 2025-02-22 18:51:12,698 ] 71 root - INFO - Running Pipeline
+[ 2025-02-22 18:51:12,699 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:12] "POST /train HTTP/1.1" 200 -
+[ 2025-02-22 18:51:12,699 ] 22 root - INFO - Initiating Data Ingestion
+[ 2025-02-22 18:51:12,700 ] 42 root - INFO - Initiating Data Ingestion
+[ 2025-02-22 18:51:12,700 ] 20 root - INFO - Reading Data
+[ 2025-02-22 18:51:12,855 ] 24 root - INFO - Data read successfully
+[ 2025-02-22 18:51:12,856 ] 31 root - INFO - Initiating train test split
+[ 2025-02-22 18:51:12,866 ] 35 root - INFO - Train test split completed
+[ 2025-02-22 18:51:12,928 ] 55 root - INFO - train and test file saved
+[ 2025-02-22 18:51:12,928 ] 26 root - INFO - Data Ingestion Completed :DataIngestionArtifact(train_file_path='Artifacts\\02_22_2025_18_51_10\\data_ingestion\\train.csv', test_file_path='Artifacts\\02_22_2025_18_51_10\\data_ingestion\\test.csv')
+[ 2025-02-22 18:51:12,928 ] 34 root - INFO - Initiating Data Validation
+[ 2025-02-22 18:51:12,928 ] 23 root - INFO - Getting train and test data for validation
+[ 2025-02-22 18:51:12,941 ] 32 root - INFO - Initialising drift report
+[ 2025-02-22 18:51:13,025 ] 58 root - INFO - Drift report final status False
+[ 2025-02-22 18:51:13,025 ] 59 root - INFO - Drift report completed
+[ 2025-02-22 18:51:13,072 ] 39 root - INFO - Completed Data Validation :DataValidationArtifact(valid_train_file_path='Artifacts\\02_22_2025_18_51_10\\data_validation\\valid_data\\train.csv', valid_test_file_path='Artifacts\\02_22_2025_18_51_10\\data_validation\\valid_data\\test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts\\02_22_2025_18_51_10\\data_validation\\drift_report')
+[ 2025-02-22 18:51:13,073 ] 46 root - INFO - Initiating Data Transformation
+[ 2025-02-22 18:51:13,073 ] 48 root - INFO - Reading data from validation folder
+[ 2025-02-22 18:51:13,095 ] 34 root - INFO - Intializing transformation pipeline
+[ 2025-02-22 18:51:13,096 ] 40 root - INFO - Transformation pipeline initialized
+[ 2025-02-22 18:51:13,105 ] 57 root - INFO - Created preprocessor object
+[ 2025-02-22 18:51:13,112 ] 61 root - INFO - Saving numpy array
+[ 2025-02-22 18:51:13,123 ] 75 root - INFO - Saved numpy arrays and preprocessor objects
+[ 2025-02-22 18:51:13,123 ] 50 root - INFO - Data Transformation completed :DataTransformationArtifact(transformed_train_file_path='Artifacts\\02_22_2025_18_51_10\\data_transformed\\data\\train.npy', transformed_test_file_path='Artifacts\\02_22_2025_18_51_10\\data_transformed\\data\\test.npy', preprocessor_object_path='Artifacts\\02_22_2025_18_51_10\\data_transformed\\Preprocessor\\preprocessor.pkl')
+[ 2025-02-22 18:51:13,125 ] 57 root - INFO - Initiaing Model Training
+[ 2025-02-22 18:51:13,125 ] 24 root - INFO - Loading numpy objects
+[ 2025-02-22 18:51:13,127 ] 27 root - INFO - Loaded numpy objects
+[ 2025-02-22 18:51:14,723 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:14] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:17,548 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:17] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:20,234 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:20] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:23,558 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:23] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:26,227 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:26] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:29,544 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:29] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:32,771 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:32] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:35,240 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:35] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:38,535 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:38] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:41,230 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:41] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:44,531 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:44] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:47,232 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:47] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:50,536 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:50] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:53,233 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:53] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:56,539 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:56] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:51:59,246 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:51:59] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:02,580 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:02] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:05,225 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:05] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:08,570 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:08] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:11,244 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:11] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:14,549 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:14] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:17,239 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:17] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:20,565 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:20] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:23,240 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:23] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:26,552 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:26] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:29,240 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:29] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:32,543 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:32] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:35,246 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:35] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:38,539 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:38] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:41,224 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:41] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:44,553 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:44] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:47,234 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:47] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:50,616 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:50] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:53,236 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:53] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:56,570 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:56] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:52:59,231 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:52:59] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:02,541 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:02] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:05,239 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:05] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:08,552 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:08] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:11,227 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:11] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:14,584 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:14] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:17,238 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:17] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:20,546 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:20] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:23,255 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:23] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:27,095 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:27] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:29,240 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:29] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:32,561 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:32] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:35,458 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:35] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:38,542 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:38] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:41,357 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:41] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:44,563 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:44] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:47,356 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:47] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:50,564 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:50] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:53,506 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:53] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:56,680 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:56] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:53:59,685 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:53:59] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:02,547 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:02] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:05,238 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:05] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:08,530 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:08] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:11,240 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:11] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:14,547 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:14] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:17,232 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:17] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:20,548 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:20] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:23,250 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:23] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:26,600 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:26] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:29,235 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:29] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:32,560 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:32] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:35,256 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:35] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:38,553 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:38] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:41,239 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:41] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:44,545 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:44] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:47,236 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:47] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:50,555 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:50] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:53,229 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:53] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:56,572 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:56] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:54:59,237 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:54:59] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:02,952 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:02] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:05,223 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:05] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:08,674 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:08] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:11,243 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:11] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:14,887 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:14] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:17,238 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:17] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:20,574 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:20] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:23,226 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:23] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:26,619 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:26] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:29,230 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:29] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:32,550 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:32] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:35,257 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:35] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:38,611 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:38] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:41,236 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:41] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:44,531 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:44] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:47,541 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:47] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:50,233 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:50] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:52,730 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:52] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:55:55,390 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:55:55] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:02,742 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:02] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:06,285 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:06] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:10,703 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:10] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:13,229 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:13] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:19,196 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:19] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:24,310 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:24] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:27,533 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:27] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:30,313 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:30] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:56:31,596 ] 70 root - INFO - Best model is RandomForestClassifier(criterion='log_loss', n_estimators=32, n_jobs=-1)
+[ 2025-02-22 18:56:32,145 ] 61 root - INFO - Model Training Completed :ModelTrainerArtifact(model_object_path='Artifacts\\02_22_2025_18_51_10\\model_trainer\\trainer\\model.pkl', training_data_artifact=ModelTrainerMetric(f1_score=1.0, precision_score=1.0, recall_score=1.0), test_data_artifact=ModelTrainerMetric(f1_score=0.961038961038961, precision_score=0.9736842105263158, recall_score=0.9487179487179487))
+[ 2025-02-22 18:56:32,146 ] 77 root - INFO - Pipeline run completed
+[ 2025-02-22 18:56:33,542 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:56:33] "GET /status HTTP/1.1" 200 -
+[ 2025-02-22 18:58:40,798 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:58:40] "GET /predict HTTP/1.1" 200 -
+[ 2025-02-22 18:59:12,051 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Feb/2025 18:59:12] "POST /predict HTTP/1.1" 200 -

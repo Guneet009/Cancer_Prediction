@@ -12,7 +12,7 @@
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("status").innerText = data.message;
-                    checkStatus();  // Start checking training status
+                    checkStatus();  
                 })
                 .catch(error => {
                     console.error("Error:", error);
@@ -27,13 +27,13 @@
                     .then(data => {
                         document.getElementById("status").innerText = data.message;
                         if (data.message !== "Training Completed") {
-                            checkStatus();  // Keep checking until completed
+                            checkStatus();  
                         }
                     })
                     .catch(error => {
                         console.error("Error:", error);
                     });
-            }, 2000);  // Check every 2 seconds
+            }, 2000);  
         }
     </script>
 </head>

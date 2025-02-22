@@ -23,34 +23,31 @@ class DataBase:
         
         with zipfile.ZipFile(zip_path, "r") as zip:
             filenames = zip.namelist()
-            zip.extractall(self.output_folder)  # Extract files to the specified folder
+            zip.extractall(self.output_folder)  
         
         for filename in filenames:
-            file_path = os.path.join(self.output_folder, filename)  # Construct full file path
+            file_path = os.path.join(self.output_folder, filename)  
             self.dataset.append(pd.read_csv(file_path))
         
         self.filenames = filenames
 
 def load_object(filepath):
     try:
-        if os.path.exists(filepath):
-            with open(filepath,"r") as fileobj:
-                pickle.load(fileobj)
-        else:
-            raise FileNotFoundError
+        if not os.path.exists(filepath):
+            raise Exception(f"The file: {filepath} is not exists")
+        with open(filepath, "rb") as file_obj:
+            print(file_obj)
+            return pickle.load(file_obj)
     except Exception as e:
         raise CustomException(e,sys)
 
 def save_object(filepath,obj):
     try:
         dir_path = os.path.dirname(filepath)
-        if os.path.exists(filepath):
-            with open(filepath,"wb") as fileobj:
-                pickle.dump(obj,fileobj)
-        else:
-            os.makedirs(dir_path)
-            with open(filepath,"wb") as fileobj:
-                pickle.dump(obj,fileobj)
+        os.makedirs(dir_path,exist_ok=True)
+        
+        with open(filepath,"wb") as file_obj:
+            pickle.dump(obj,file_obj)
     except Exception as e:
         raise CustomException(e,sys)
 

@@ -1,0 +1,93 @@
+area_mean:
+  pvalue: 0.5928765916123309
+  status: false
+area_se:
+  pvalue: 0.6068898061417052
+  status: false
+area_worst:
+  pvalue: 0.5236372222996272
+  status: false
+compactness_mean:
+  pvalue: 0.6160818091290418
+  status: false
+compactness_se:
+  pvalue: 0.6846614122808935
+  status: false
+compactness_worst:
+  pvalue: 0.2415525323081869
+  status: false
+concave points_mean:
+  pvalue: 0.635403683517095
+  status: false
+concave points_se:
+  pvalue: 0.9301933562089402
+  status: false
+concave points_worst:
+  pvalue: 0.6414018079443737
+  status: false
+concavity_mean:
+  pvalue: 0.9758515610010463
+  status: false
+concavity_se:
+  pvalue: 0.989381526564297
+  status: false
+concavity_worst:
+  pvalue: 0.6904187902871621
+  status: false
+diagnosis:
+  pvalue: 0.9985544599142936
+  status: false
+fractal_dimension_mean:
+  pvalue: 0.5759816146568749
+  status: false
+fractal_dimension_se:
+  pvalue: 0.23664948403805322
+  status: false
+fractal_dimension_worst:
+  pvalue: 0.05260852269476074
+  status: false
+perimeter_mean:
+  pvalue: 0.5913449865581843
+  status: false
+perimeter_se:
+  pvalue: 0.5646502642336785
+  status: false
+perimeter_worst:
+  pvalue: 0.4902266296730024
+  status: false
+radius_mean:
+  pvalue: 0.6279007180547508
+  status: false
+radius_se:
+  pvalue: 0.7027968965893602
+  status: false
+radius_worst:
+  pvalue: 0.5579171918012253
+  status: false
+smoothness_mean:
+  pvalue: 0.8258006821260033
+  status: false
+smoothness_se:
+  pvalue: 0.6986130205140522
+  status: false
+smoothness_worst:
+  pvalue: 0.578388581523981
+  status: false
+symmetry_mean:
+  pvalue: 0.16629276163486434
+  status: false
+symmetry_se:
+  pvalue: 0.1774503352077538
+  status: false
+symmetry_worst:
+  pvalue: 0.4776098232741783
+  status: false
+texture_mean:
+  pvalue: 0.27979005657999856
+  status: false
+texture_se:
+  pvalue: 0.3431368354053339
+  status: false
+texture_worst:
+  pvalue: 0.16965235806715023
+  status: false

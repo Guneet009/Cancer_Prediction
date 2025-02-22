@@ -21,7 +21,7 @@ class TrainingPipeline:
         try:
             logging.info("Initiating Data Ingestion")
             self.data_ingestion_config = DataIngestionConfig(self.training_pipeline_config)
-            data_ingestion = DataIngestion(self.data_ingestion_config)
+            data_ingestion = DataIngestion(data_ingestion_config=self.data_ingestion_config)
             data_ingestion_artifact:DataIngestionArtifact = data_ingestion.initiate_data_ingestion()
             logging.info(f"Data Ingestion Completed :{data_ingestion_artifact}")
             return data_ingestion_artifact
@@ -34,7 +34,7 @@ class TrainingPipeline:
             logging.info("Initiating Data Validation")
             
             self.data_validation_config = DataValidationConfig(self.training_pipeline_config)
-            data_validation = DataValidation(data_ingestion_artifact,self.data_validation_config)
+            data_validation = DataValidation(data_ingestion_artifact=data_ingestion_artifact,data_validation_config=self.data_validation_config)
             data_validation_artifact = data_validation.initiate_data_validation()
             logging.info(f"Completed Data Validation :{data_validation_artifact}") 
             return data_validation_artifact
@@ -45,7 +45,7 @@ class TrainingPipeline:
         try:
             logging.info("Initiating Data Transformation")
             self.data_transformation_config = DataTransformationConfig(self.training_pipeline_config)
-            data_transformation = DataTransformation(self.data_transformation_config,data_validation_artifact)
+            data_transformation = DataTransformation(data_transformation_config=self.data_transformation_config,data_validation_artifact=data_validation_artifact)
             data_transformation_artifact = data_transformation.initiate_data_transformation()
             logging.info(f"Data Transformation completed :{data_transformation_artifact}")
             return data_transformation_artifact
@@ -56,7 +56,7 @@ class TrainingPipeline:
         try:
             logging.info("Initiaing Model Training")
             self.model_trainer_config = ModelTrainerConfig(self.training_pipeline_config)
-            model_trainer = ModelTrainer(self.model_trainer_config,data_transformation_artifact)
+            model_trainer = ModelTrainer(model_trainer_config=self.model_trainer_config,data_transformation_artifact=data_transformation_artifact)
             model_trainer_artifact = model_trainer.initiatte_model_training()
             logging.info(f"Model Training Completed :{model_trainer_artifact}")
             return model_trainer_artifact

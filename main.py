@@ -39,5 +39,6 @@ if __name__ =="__main__":
         logging.info("model training completed")
         print(model_trainer_artifact)
         
+        
     except Exception as e:
         raise CustomException(e,sys)
