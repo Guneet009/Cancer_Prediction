@@ -13,7 +13,7 @@ class DataBase:
         os.system(API_COMMAND)
         self.name = API_COMMAND.split('/')
         self.output_folder = output_folder
-        os.makedirs(self.output_folder, exist_ok=True)  # Create output folder if it doesn't exist
+        os.makedirs(self.output_folder, exist_ok=True)  
         self.Open()
         os.remove(self.name[1] + ".zip")
     
@@ -75,6 +75,13 @@ def save_object_as_numpy_arr(filepath,obj):
             with open(filepath,"wb") as file:
                 np.save(file,obj)
         
+    except Exception as e:
+        raise CustomException(e,sys)
+
+def load_object_as_numpy_arr(filepath):
+    try:
+        with open(filepath,"rb") as file:
+            return np.load(file)
     except Exception as e:
         raise CustomException(e,sys)
     

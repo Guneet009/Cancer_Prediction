@@ -1,6 +1,11 @@
 numpy
 pandas
+seaborn
 scikit-learn
 kaggle
 matplotlib
 pyaml
+xgboost
+mlflow
+dagshub
+flask

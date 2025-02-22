@@ -20,6 +20,7 @@ class DataIngestion:
             logging.info("Reading Data")
             df = pd.read_csv(RAW_FILE_PATH)
             df.replace({"na":np.nan},inplace=True)
+            df.drop(columns=['id'],axis=1,inplace=True)
             logging.info("Data read successfully")
             return df
         except Exception as e:

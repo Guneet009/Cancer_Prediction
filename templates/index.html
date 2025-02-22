@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Model</title>
+    <script>
+        function startTraining() {
+            document.getElementById("status").innerText = "Training in progress...";
+
+            fetch('/train', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("status").innerText = data.message;
+                    checkStatus();  // Start checking training status
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("status").innerText = "Error starting training!";
+                });
+        }
+
+        function checkStatus() {
+            setTimeout(() => {
+                fetch('/status')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("status").innerText = data.message;
+                        if (data.message !== "Training Completed") {
+                            checkStatus();  // Keep checking until completed
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+            }, 2000);  // Check every 2 seconds
+        }
+    </script>
+</head>
+<body>
+    <h1>Train Your Model</h1>
+    <button onclick="startTraining()">Start Training</button>
+    <p id="status">Click the button to start training.</p>
+</body>
+</html>

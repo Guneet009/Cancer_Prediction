@@ -2,10 +2,14 @@ from src.utils.main_utils.utils import DataBase
 from src.data_ingestion.data_ingestion import DataIngestion
 from src.data_validation.data_validation import DataValidation
 from src.data_transformation.data_transformation import DataTransformation
-from src.entity.config_entity import DataIngestionConfig,TrainingPipelineConfig,DataValidationConfig,DataTransformationConfig
-from src.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact,DataTransformationArtifact
+from src.model_trainer.model_trainer import ModelTrainer
+from src.entity.config_entity import DataIngestionConfig,TrainingPipelineConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig
+from src.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact,DataTransformationArtifact,ModelTrainerArtifact
 from src.Custom_Exception.CustomException import CustomException
 from src.logger.logging import logging
+import warnings
+warnings.filterwarnings('ignore')
+
 import sys
 
 if __name__ =="__main__":
@@ -28,6 +32,12 @@ if __name__ =="__main__":
         data_transformation_artifact = data_transformation.initiate_data_transformation()
         logging.info("Data transformation complete")
         print(data_transformation_artifact)
+        logging.info("Intiating training")
+        model_trainer_config = ModelTrainerConfig(training_pipeline_config)
+        model_trainer = ModelTrainer(model_trainer_config,data_transformation_artifact)
+        model_trainer_artifact = model_trainer.initiatte_model_training()
+        logging.info("model training completed")
+        print(model_trainer_artifact)
         
     except Exception as e:
         raise CustomException(e,sys)

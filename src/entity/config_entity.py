@@ -79,4 +79,21 @@ class DataTransformationConfig:
         self.data_transformation_object = os.path.join(
             self.data_transformation_object_path,constants.DATA_TRANSFORMATION_OBJECT
         )
-        
+
+class ModelTrainerConfig:
+    def __init__(self,train_pipeline_comfig:TrainingPipelineConfig):
+        self.model_trainer_dir:str = os.path.join(
+            train_pipeline_comfig.artifact_dir,constants.MODEL_TRAINER_DIR_PATH
+        )
+        self.model_trainer_file_path = os.path.join(
+            self.model_trainer_dir,constants.MODEL_TRAINER_FILE_PATH
+        )
+        self.model_trainer_obj = os.path.join(
+            self.model_trainer_file_path,constants.MODEL_TRAINER
+        )
+        self.model_trainer_report_file_path = os.path.join(
+            self.model_trainer_dir,constants.MODEL_TRAINER_REPORT_PATH
+        )
+        self.model_trainer_report = os.path.join(
+            self.model_trainer_report_file_path,constants.MODEL_TRAINER_REPORT
+        )
