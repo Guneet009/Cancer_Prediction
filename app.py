@@ -10,15 +10,15 @@ import threading
 
 app = Flask(__name__)
 
-training_complete = False  # Track training status
+training_complete = False  
 
 def train_model():
     global training_complete
-    training_complete = False  # Reset before training starts
+    training_complete = False  
     training_pipeline_config = TrainingPipelineConfig()
     train_pipeline = TrainingPipeline(training_pipeline_config)
-    train_pipeline.run_pipeline()  # Run your actual training
-    training_complete = True  # Mark as completed
+    train_pipeline.run_pipeline()  
+    training_complete = True  
 
 @app.route('/')
 def index():
@@ -59,7 +59,7 @@ def predict():
         ]
 
         input_data = [float(request.form[feature]) for feature in features]
-        input_array = np.array(input_data).reshape(1, -1)  # Reshape for model
+        input_array = np.array(input_data).reshape(1, -1)  
 
         # Predict using the loaded model
         
